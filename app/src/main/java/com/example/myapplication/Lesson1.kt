@@ -27,4 +27,20 @@ fun main(){
     var J: Byte= I.toByte()
     println(I)
     println(J)
+
+    var name:String="Hello__Suraj_"
+    var check:Boolean=name.equals("hello")
+    var i:Int=name.length
+    println(name)
+    println(check)
+    println(i)
+    println(name.isEmpty())
+    println(name.uppercase())
+    println(name.lowercase())
+
+    //trim()-> It remove the space from the beginning and end of the word
+
+    var name1:String="  Sushil"
+    println(name1.trim())
+    println(name1.plus("! What are you doing."))
 }
