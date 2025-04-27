@@ -256,7 +256,7 @@ fun LoginBody(innerPadding: PaddingValues){
 
 
 }
-
+//This line is to have a preview section what we have done directly in the screen.
 @Preview
 @Composable
 fun PreviewBody(){
