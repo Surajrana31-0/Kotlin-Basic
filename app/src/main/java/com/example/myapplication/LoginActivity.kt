@@ -190,8 +190,7 @@ fun LoginBody(innerPadding: PaddingValues){
             }
             OutlinedButton(
                 onClick = {
-                    // user le button thiche pachi ke garne
-//                to-do when clicked
+
                 },
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.outlinedButtonColors(
@@ -202,8 +201,7 @@ fun LoginBody(innerPadding: PaddingValues){
             }
             OutlinedButton(
                 onClick = {
-                    // user le button thiche pachi ke garne
-//                to-do when clicked
+
                 },
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.outlinedButtonColors(
@@ -214,8 +212,7 @@ fun LoginBody(innerPadding: PaddingValues){
             }
             OutlinedButton(
                 onClick = {
-                    // user le button thiche pachi ke garne
-//                to-do when clicked
+
                 },
                 shape = RoundedCornerShape(10.dp),
 //                border = BorderStroke(1.dp,Color.Red),
