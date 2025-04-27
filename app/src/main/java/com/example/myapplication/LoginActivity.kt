@@ -47,6 +47,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.ui.theme.MyApplicationTheme
+import com.example.myapplication.ui.theme.Pink60
 import java.nio.file.WatchEvent
 
 class LoginActivity : ComponentActivity() {
@@ -241,7 +242,7 @@ fun LoginBody(innerPadding: PaddingValues){
             Card(
                 modifier = Modifier.height(300.dp).weight(3f),
                 colors = CardDefaults.cardColors(
-                    containerColor = Color.Green
+                    containerColor = Pink60
                 )
             ) {
 
