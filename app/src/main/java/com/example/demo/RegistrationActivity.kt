@@ -12,7 +12,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
-//import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.demo.ui.theme.DEMOTheme
@@ -51,33 +50,37 @@ fun Registration(innerPadding: PaddingValues) {
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
 
-    ) {
+        ) {
         Text(text = "Register", style = MaterialTheme.typography.headlineMedium)
 
-        Spacer(modifier = Modifier.height(16.dp))
 
-        // Firstname and Lastname side by side
+        Spacer(modifier = Modifier.height(10.dp))
+
+
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedTextField(
                 value = firstName,
-                onValueChange = { input -> firstName = input },
+                onValueChange = { input ->
+                    firstName = input },
                 label = { Text("Firstname") },
                 modifier = Modifier.weight(1f)
             )
             OutlinedTextField(
                 value = lastName,
-                onValueChange = { input -> lastName = input},
+                onValueChange = { input ->
+                    lastName = input},
                 label = { Text("Lastname") },
                 modifier = Modifier.weight(1f)
             )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
         // Email
         OutlinedTextField(
             value = email,
-            onValueChange = { input -> email = input },
+            onValueChange = { input ->
+                email = input },
             label = { Text("Email") },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
             modifier = Modifier.fillMaxWidth()
@@ -96,7 +99,6 @@ fun Registration(innerPadding: PaddingValues) {
                 readOnly = true,
                 label = { Text("Select Country") },
                 modifier = Modifier
-                    //.menuAnchor()
                     .fillMaxWidth(),
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                 colors = ExposedDropdownMenuDefaults.textFieldColors()
@@ -119,7 +121,7 @@ fun Registration(innerPadding: PaddingValues) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // DOB
+
         OutlinedTextField(
             value = dob,
             onValueChange = { dob = it },
@@ -127,24 +129,30 @@ fun Registration(innerPadding: PaddingValues) {
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
-        // Gender radio buttons
+
         Text(text = "Gender")
         Row(verticalAlignment = Alignment.CenterVertically) {
-            RadioButton(selected = gender == "Male", onClick = { gender = "Male" })
+            RadioButton(selected = gender == "Male",
+            onClick = { gender = "Male" })
             Text("Male")
+
+
             Spacer(modifier = Modifier.width(8.dp))
-            RadioButton(selected = gender == "Female", onClick = { gender = "Female" })
+            RadioButton(selected = gender == "Female",
+            onClick = { gender = "Female" })
             Text("Female")
+
             Spacer(modifier = Modifier.width(8.dp))
-            RadioButton(selected = gender == "Others", onClick = { gender = "Others" })
-            Text("Others")
+            RadioButton(selected = gender == "others",
+            onClick = { gender = "others" })
+            Text("others")
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
-        // Terms and Conditions
+
         Row(verticalAlignment = Alignment.CenterVertically) {
             Checkbox(checked = acceptTerms, onCheckedChange = { acceptTerms = it })
             Text("I accept terms and conditions")
@@ -152,14 +160,25 @@ fun Registration(innerPadding: PaddingValues) {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Submit button
+
         Button(
             onClick = { /* Handle registration */ },
+
+
             modifier = Modifier.fillMaxWidth(),
             enabled = acceptTerms
         ) {
             Text("Register")
         }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+
+        Text(
+            text = "Already have account, Sign in",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.primary
+        )
     }
 }
 
